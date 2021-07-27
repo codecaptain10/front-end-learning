@@ -1,5 +1,6 @@
 body {
-    background-color: coral;
+    background-color: cadetblue;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -9,6 +10,7 @@ body {
     width: 60vh;
     height: 80vh;
     box-sizing: border-box;
+    border: black 0.3vh solid;
     position: absolute;
     top: calc(50% - 40vh);
     left: calc(50% - 30vh);
@@ -51,10 +53,12 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
+    align-content: stretch;
     justify-content: space-between;
 }
 
 .reset {
+    background-color: yellowgreen;
     font-size: 4vh;
     text-align: center;
     line-height: 150%;
@@ -74,7 +78,21 @@ body {
     font-size: 5vh;
     line-height: 150%;
     font-family: Arial, Helvetica, sans-serif;
+    height: 12.9vh;
     /*flex for number*/
     flex-grow: 1;
     flex-basis: 25%;
+}
+
+.number:hover,
+.operation:hover {
+    background-color: limegreen;
+    cursor: pointer;
+    font-size: 5.5vh;
+}
+
+.reset:hover {
+    background-color: yellow;
+    cursor: pointer;
+    font-size: 4.5vh;
 }
