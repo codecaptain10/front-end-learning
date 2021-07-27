@@ -1,0 +1,80 @@
+body {
+    background-color: coral;
+    padding: 0;
+    margin: 0;
+}
+
+.app {
+    background-color: lightblue;
+    width: 60vh;
+    height: 80vh;
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(50% - 40vh);
+    left: calc(50% - 30vh);
+    /*Flex for counter and tabs*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.counter {
+    background-color: lightcyan;
+    box-sizing: border-box;
+    border: black 0.3vh solid;
+    font-size: 5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    /*Flex for counter*/
+    flex-grow: 1;
+    flex-basis: 25%;
+    /*flex for score*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.score {
+    margin-right: 2vh;
+    font-size: 7vh;
+}
+
+.tabs {
+    background-color: lightgreen;
+    /*Flex for tabs*/
+    flex-grow: 3;
+    flex-basis: 65%;
+    /*Flex for other classes: number, operation*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.reset {
+    font-size: 4vh;
+    text-align: center;
+    line-height: 150%;
+    box-sizing: border-box;
+    border: black 0.3vh solid;
+    font-family: Arial, Helvetica, sans-serif;
+    /*flex for reset*/
+    flex-grow: 1;
+    flex-basis: 10%;
+}
+
+.number,
+.operation {
+    box-sizing: border-box;
+    text-align: center;
+    border: black 0.3vh solid;
+    font-size: 5vh;
+    line-height: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+    /*flex for number*/
+    flex-grow: 1;
+    flex-basis: 25%;
+}
