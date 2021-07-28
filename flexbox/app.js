@@ -30,7 +30,7 @@ for (let i = 0; i < operations.length; i++) {
 
 
         } else if (operations[i].textContent == "=") {
-            doOperation();
+            calculateResult();
 
         } else {
             score.textContent = result + " " + operations[i].textContent + " ";
@@ -47,16 +47,15 @@ reset.addEventListener('click', function() {
     console.log(result);
 });
 
-//Operation: argument operation argument
+//Operation to calculate operation without eval() method
 const doOperation = function() {
     result.toString();
     let finalScore;
-
     let parameters = result.split(" ")
 
-    let number1 = parseInt(parameters[0]);
+    let number1 = parseFloat(parameters[0]);
     let operation = parameters[1];
-    let number2 = parseInt(parameters[2]);
+    let number2 = parseFloat(parameters[2]);
     console.log(parameters[0]);
     console.log(parameters[1]);
     console.log(parameters[2]);
@@ -73,6 +72,11 @@ const doOperation = function() {
 
     score.textContent = finalScore.toString();
     result = "";
+}
 
-
+//Operation to calculate the result
+const calculateResult = function() {
+    result.toString();
+    score.textContent = eval(result);
+    result = "";
 }
