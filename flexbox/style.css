@@ -32,8 +32,11 @@ body {
     /*Flex for counter*/
     flex-grow: 1;
     flex-basis: 25%;
+    width: 100%;
     /*flex for score*/
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
 }
