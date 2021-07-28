@@ -12,6 +12,53 @@ let reset = document.querySelector('.reset');
 //result
 let result = "";
 
+//FUNCTIONS
+//Operation to calculate operation without eval() method
+const doOperation = function() {
+    result.toString();
+    let finalScore;
+    let parameters = result.split(" ")
+
+    let number1 = parseFloat(parameters[0]);
+    let operation = parameters[1];
+    let number2 = parseFloat(parameters[2]);
+    console.log(parameters[0]);
+    console.log(parameters[1]);
+    console.log(parameters[2]);
+
+    if (operation == "+") {
+        finalScore = number1 + number2;
+    } else if (operation == "-") {
+        finalScore = number1 - number2;
+    } else if (operation == "*") {
+        finalScore = number1 * number2;
+    } else if (operation == "/") {
+        finalScore = number1 / number2;
+    }
+
+    score.textContent = finalScore.toString();
+    result = "";
+}
+
+//Operation to calculate the result with eval() method
+const calculateResult = function() {
+    result.toString();
+    score.textContent = eval(result);
+    result = "";
+}
+
+//Operation to remove last element
+const removeLastElement = function() {
+    if (result[result.length - 1] == " ") {
+        result = result.slice(0, -3);
+    } else {
+        result = result.slice(0, -1);
+    }
+
+    score.textContent = result;
+}
+
+
 
 //EVENTS
 //Event for all numbers
@@ -41,42 +88,4 @@ for (let i = 0; i < operations.length; i++) {
     });
 }
 //Event for reset 
-reset.addEventListener('click', function() {
-    score.textContent = "";
-    result = score.textContent;
-    console.log(result);
-});
-
-//Operation to calculate operation without eval() method
-const doOperation = function() {
-    result.toString();
-    let finalScore;
-    let parameters = result.split(" ")
-
-    let number1 = parseFloat(parameters[0]);
-    let operation = parameters[1];
-    let number2 = parseFloat(parameters[2]);
-    console.log(parameters[0]);
-    console.log(parameters[1]);
-    console.log(parameters[2]);
-
-    if (operation == "+") {
-        finalScore = number1 + number2;
-    } else if (operation == "-") {
-        finalScore = number1 - number2;
-    } else if (operation == "*") {
-        finalScore = number1 * number2;
-    } else if (operation == "/") {
-        finalScore = number1 / number2;
-    }
-
-    score.textContent = finalScore.toString();
-    result = "";
-}
-
-//Operation to calculate the result
-const calculateResult = function() {
-    result.toString();
-    score.textContent = eval(result);
-    result = "";
-}
+reset.addEventListener('click', removeLastElement);
