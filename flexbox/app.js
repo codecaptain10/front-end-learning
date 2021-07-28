@@ -30,7 +30,7 @@ for (let i = 0; i < operations.length; i++) {
 
 
         } else if (operations[i].textContent == "=") {
-            calcAB();
+            doOperation();
 
         } else {
             score.textContent = result + "" + operations[i].textContent + "";
@@ -48,12 +48,25 @@ reset.addEventListener('click', function() {
 });
 
 //Operation: argument operation argument
-const calcAB = function() {
+const doOperation = function() {
     result.toString();
-    let x = result.length;
-    score.textContent = x;
-    console.log(result[0]);
-    console.log(result[1]);
-    console.log(result[2]);
+    let finalScore;
+    let number1 = parseInt(result[0]);
+    let operation = result[1];
+    let number2 = parseInt(result[2]);
+
+    if (operation == "+") {
+        finalScore = number1 + number2;
+    } else if (operation == "-") {
+        finalScore = number1 - number2;
+    } else if (operation == "*") {
+        finalScore = number1 * number2;
+    } else if (operation == "/") {
+        finalScore = number1 / number2;
+    }
+
+    score.textContent = finalScore.toString();
+    result = "";
+
 
 }

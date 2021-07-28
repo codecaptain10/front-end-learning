@@ -5,6 +5,14 @@ body {
     margin: 0;
 }
 
+.actual-step {
+    font-size: 4vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 2vh;
+}
+
 .app {
     background-color: lightblue;
     width: 60vh;
