@@ -33,7 +33,7 @@ for (let i = 0; i < operations.length; i++) {
             doOperation();
 
         } else {
-            score.textContent = result + "" + operations[i].textContent + "";
+            score.textContent = result + " " + operations[i].textContent + " ";
         }
 
         result = score.textContent;
@@ -51,9 +51,15 @@ reset.addEventListener('click', function() {
 const doOperation = function() {
     result.toString();
     let finalScore;
-    let number1 = parseInt(result[0]);
-    let operation = result[1];
-    let number2 = parseInt(result[2]);
+
+    let parameters = result.split(" ")
+
+    let number1 = parseInt(parameters[0]);
+    let operation = parameters[1];
+    let number2 = parseInt(parameters[2]);
+    console.log(parameters[0]);
+    console.log(parameters[1]);
+    console.log(parameters[2]);
 
     if (operation == "+") {
         finalScore = number1 + number2;
