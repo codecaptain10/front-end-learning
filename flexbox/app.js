@@ -1,4 +1,4 @@
-//GLOBAL VARIABLES
+//----- GLOBAL VARIABLES  -----
 //score
 let score = document.querySelector(".score");
 //numbers
@@ -11,8 +11,10 @@ console.log(operations);
 let reset = document.querySelector('.reset');
 //result
 let result = "";
+//Value to know if the score was calculated
+let calculated = false;
 
-//FUNCTIONS
+//----- FUNCTIONS  -----
 //Operation to calculate operation without eval() method
 const doOperation = function() {
     result.toString();
@@ -45,6 +47,7 @@ const calculateResult = function() {
     result.toString();
     score.textContent = eval(result);
     result = "";
+    calculated = true;
 }
 
 //Operation to remove last element
@@ -56,31 +59,48 @@ const removeLastElement = function() {
     }
 
     score.textContent = result;
+
 }
 
 
 
-//EVENTS
+//----- EVENTS  ----
 //Event for all numbers
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener('click', function() {
+        if (calculated == false) {
+            score.textContent = result + numbers[i].textContent;
+        } else {
+            result = "";
+            calculated = false;
+        }
         score.textContent = result + numbers[i].textContent;
         result = score.textContent;
-        console.log(result);
+        //console.log(result);
     });
 }
 //Event for all operations
 for (let i = 0; i < operations.length; i++) {
     operations[i].addEventListener('click', function() {
         if (operations[i].textContent == ".") {
-            score.textContent = result + "" + operations[i].textContent + "";
+            if (calculated == false) {
+                score.textContent = result + "" + operations[i].textContent + "";
+            } else {
+                result = "";
+                calculated = false;
+                score.textContent = result + "" + operations[i].textContent + "";
+            }
+
+
 
 
         } else if (operations[i].textContent == "=") {
             calculateResult();
 
+
         } else {
             score.textContent = result + " " + operations[i].textContent + " ";
+            calculated = false;
         }
 
         result = score.textContent;
