@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 100px);
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 200px;
+    color: black;
+    border: 2px solid black;
+}
+
+button:hover {
+    color: azure;
+    background-color: black;
+}
