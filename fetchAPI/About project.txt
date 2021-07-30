@@ -1,3 +1,0 @@
-Source: https://randomuser.me/
-
-Project to testing API and learning fetch method.
