@@ -1,6 +1,7 @@
 Source: https://randomuser.me/
 
-Description: Project to testing API and learning fetch method.
+Description: 
+Project to testing API and learning fetch method.
 Projekt: Łączenie się za pomocą metody fetch z serwerem API, który
 będzie nam udostępniał dane na temat osób
 API ogólnodostępne, nie wymagające uwierzytylnienia, RandomAPI
@@ -26,7 +27,8 @@ Examples:
 	6) Information about 10 woman from United Kingdom or Germany in JSON format
 	https://randomuser.me/api/?results=10&gender=female&format=json&nat=gb,de
 
-Idee: Application, where we can search list of persons. 
+Idee: 
+Application, where we can search list of persons. 
 We can choose how many person and if we want a woman or a men.
 
 
