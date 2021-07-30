@@ -6,6 +6,7 @@ będzie nam udostępniał dane na temat osób
 API ogólnodostępne, nie wymagające uwierzytylnienia, RandomAPI
 
 Examples:
+
 	1) Information about 3 persons 
 	https://randomuser.me/api/?results=3
 
