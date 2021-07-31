@@ -20,4 +20,5 @@ button {
 button:hover {
     color: azure;
     background-color: black;
+    cursor: pointer;
 }
