@@ -3,11 +3,33 @@ body {
     font-size: 22px;
     max-width: 1200px;
     margin: 50px auto;
+    background-color: wheat;
+    box-sizing: border-box;
 }
 
 input,
 select {
     font-size: 22px;
+}
+
+.user-list {
+    background-color: #eee;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.user {
+    flex-basis: 80%;
+    height: 30px;
+    padding: 20px;
+    background-color: burlywood;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 button {
