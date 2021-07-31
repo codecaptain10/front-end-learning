@@ -2,10 +2,21 @@
 
 //const { response } = require("express");
 
-//url adress
-const url = 'https://randomuser.me/api/?results=10';
+
 //Function getUsers
-const getUsers = () => {
+const getUsers = (e) => {
+    //event
+    e.preventDefault();
+
+
+    //gender value
+    const gender = document.querySelector('.generator-select').value;
+    //number of users value
+    const usersNumber = document.querySelector('.number-input').value;
+    //url adress
+    const url = `https://randomuser.me/api/?results=${usersNumber}&gender=${gender === 'both' ? "male,female" : gender}`;
+    console.log(url);
+
     //fetch method from window object
     fetch(url)
         .then(response => {
@@ -22,10 +33,10 @@ const getUsers = () => {
 }
 
 //Search button
-const searchButton = document.querySelector('button');
+const searchButton = document.querySelector('.generator');
 
 
 //-----EVENTS-----
 
 //Event for download users
-searchButton.addEventListener('click', getUsers);
+searchButton.addEventListener('submit', getUsers);

@@ -11,7 +11,20 @@
 </head>
 
 <body>
-    <button>Download users</button>
+    <form class="generator">
+        <label class="generator-input-name"> Select gender:
+        <select class="generator-select" name="gender">
+            <option value="both" selected>Both</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+        </select>
+    </label>
+        <label class="generator-input-name"> Number of persons
+            <input class="number-input" type="number" value="100">
+    </label>
+        <input type="submit" class="generator" value="Downolad users">
+    </form>
+
 
     <script src="app.js"></script>
 </body>
