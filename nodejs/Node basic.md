@@ -10,7 +10,9 @@ Basic Node.js
 	- npm intellisense
 	- Path intellisense
 	- Auto Close Tag
-	- JSON-Settings:
+	
+	
+3) JSON-Settings:
 	
 		"editor.formatOnSave": true,
 		"eslint.alwaysShowStatus": true,
