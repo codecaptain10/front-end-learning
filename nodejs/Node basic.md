@@ -11,6 +11,7 @@ Basic Node.js
 	- Path intellisense
 	- Auto Close Tag
 	- JSON-Settings:
+	
 		"editor.formatOnSave": true,
 		"eslint.alwaysShowStatus": true,
 		"editor.wordWrap": "on",
