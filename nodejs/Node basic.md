@@ -1,10 +1,10 @@
-#Basic Node.js 
+<h2>Basic Node.js</h2>
 
-1) What is Node.js ?
+**1) What is Node.js ?**
 
 	- Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine
 	
-2) Tips for configuration in VSC
+**2) Tips for configuration in VSC**
 	
 	- Material Icon Theme
 	- npm intellisense
@@ -12,7 +12,7 @@
 	- Auto Close Tag
 	
 	
-3) JSON-Settings:
+**3) JSON-Settings:**
 	
 		"editor.formatOnSave": true,
 		"eslint.alwaysShowStatus": true,
