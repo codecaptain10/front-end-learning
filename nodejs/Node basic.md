@@ -28,3 +28,20 @@
 		"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
 		"explorer.confirmDelete": false,
 		"editor.acceptSuggestionOnCommitCharacter": false
+		
+**4) Node.js installation and first code
+	
+	- Source: nodejs.org 
+	- Hello World in Node.js
+	
+**5) Webserver in Node.js
+	
+	- Modules
+	- Modul http
+	- request and response
+	- require() method
+
+**6) REPL
+	
+	- Read Eval Print Loop
+	- Node.js CLI
