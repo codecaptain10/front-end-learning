@@ -29,19 +29,19 @@
 		"explorer.confirmDelete": false,
 		"editor.acceptSuggestionOnCommitCharacter": false
 		
-**4) Node.js installation and first code
+**4) Node.js installation and first code**
 	
 	- Source: nodejs.org 
 	- Hello World in Node.js
 	
-**5) Webserver in Node.js
+**5) Webserver in Node.js**
 	
 	- Modules
 	- Modul http
 	- request and response
 	- require() method
 
-**6) REPL
+**6) REPL**
 	
 	- Read Eval Print Loop
 	- Node.js CLI
