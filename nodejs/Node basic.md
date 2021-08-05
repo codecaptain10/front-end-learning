@@ -45,3 +45,9 @@
 	
 	- Read Eval Print Loop
 	- Node.js CLI
+	- Useful options:
+		- .editor 	(code editor in CLI)
+		- 2 x TAB 	(all functions for object global)
+		- global  	(object global)
+		- process 	(object process)
+	
