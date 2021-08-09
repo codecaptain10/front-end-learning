@@ -51,3 +51,11 @@
 		- global  	(object global)
 		- process 	(object process)
 	
+**7) Object global and object process**
+
+**8) Callback function**
+	
+	- A function passed into another function as an argument
+	- This argument is then invoked inside the outer functon to complete some kind of routine or action
+	
+**9) **	
