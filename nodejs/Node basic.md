@@ -58,4 +58,12 @@
 	- A function passed into another function as an argument
 	- This argument is then invoked inside the outer functon to complete some kind of routine or action
 	
-**9) **	
+**9) Asynchronous in JavaScrip**
+		
+	- Callbacks
+	- Promises
+	- Aysync Await
+	
+**10) Callstack **
+
+**11) Event loop and non blocking I/O**
