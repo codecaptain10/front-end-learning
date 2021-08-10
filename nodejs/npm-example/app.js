@@ -1,13 +1,13 @@
  /* NPM Example
-           - Node Package Manager
-           - To download and management of packages (modules) 
+                  - Node Package Manager
+                  - To download and management of packages (modules) 
 
-           -Example: color.js package
-             Source : https://www.npmjs.com/package/colors
-             How to use? : All needed information we have in docs
-            
-                
-           */
+                  -Example: color.js package
+                    Source : https://www.npmjs.com/package/colors
+                    How to use? : All needed information we have in docs
+                   
+                       
+        */
 
  //Import
  const colors = require('colors');

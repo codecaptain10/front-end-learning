@@ -84,3 +84,17 @@
 	- Example: package colors.js
 		- Source: https://www.npmjs.com/package/colors
 		- npm install colors
+		
+**13) JSON**
+	
+	- JavaScriptObjectNotation
+	- Methods:
+		JSON.parse : JSON -> Object JS
+		JSON.stringify: Object Js -> JSON
+
+**14) Nodemon**
+
+	- Nodemon is a tool that helps develop node.js based applications 
+	- Automatically restarting the node application 
+	- Restarting when file changes in the directory are detected.
+	- Source: https://www.npmjs.com/package/nodemon
