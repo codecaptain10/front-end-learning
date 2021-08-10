@@ -71,6 +71,16 @@
 **12) NPM**
 	
 	- Node Package Manager
+	- Source: npmjs.com
 	- npm is the world's largest software registry 
 	- open source developers from every continent use npm to share and borrow packages
 	- many organizations use npm to manage private development as well.
+	- npm init
+		- Create a package.json file
+		- JSON file with all information about the project
+	- Install some package (example):
+		- npm i express
+		- npm install express
+	- Example: package colors.js
+		- Source: https://www.npmjs.com/package/colors
+		- npm install colors
