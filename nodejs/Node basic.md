@@ -67,3 +67,8 @@
 **10) Callstack **
 
 **11) Event loop and non blocking I/O**
+
+**12) NPM **
+	
+	- Node Package Manager
+	- npm is the world's largest software registry. Open source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.
