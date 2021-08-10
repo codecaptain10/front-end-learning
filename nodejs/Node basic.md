@@ -64,11 +64,11 @@
 	- Promises
 	- Aysync Await
 	
-**10) Callstack **
+**10) Callstack**
 
 **11) Event loop and non blocking I/O**
 
-**12) NPM **
+**12) NPM**
 	
 	- Node Package Manager
 	- npm is the world's largest software registry 
