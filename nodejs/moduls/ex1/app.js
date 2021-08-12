@@ -1,4 +1,5 @@
-/*
+/*Example 1:
+
 This is a test file to work with modules
 
 Node.js docs: https://nodejs.org/en/docs/
