@@ -105,3 +105,22 @@
 	
 	- Architecture
 	- Creating Web server
+	- Request & Response
+	- Response status:
+		- 200 Status ok
+		- 301 Moved Permanantly
+		- 403 Forbidden (no access)
+		- 404 Not found (server ok, bad url/url doesn't exist)
+		- 500 Internal Server Error
+	- Routing
+	- API (Application Programming Interface)
+	- Endpoints
+		- GET
+		- PUT
+		- POST
+		- DELETE
+		- others...
+	- Express.js
+		- Node.js framework
+		- Built on HTTP module
+		- Better, faster, efficiently
