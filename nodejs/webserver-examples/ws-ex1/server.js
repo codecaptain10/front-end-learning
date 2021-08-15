@@ -1,3 +1,4 @@
+//Example 1
 //Webserver in Node.js 
 /*
   1. Create a new order and server.js file
@@ -23,7 +24,9 @@ const http = require('http');
 const server = http.createServer((request, response) => {
     //From which adress become we informaiton
     console.log(`URL: ${request.url}`);
-    response.writeHead(200, { 'Content-Type': 'text/html' });
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
     response.end('<h1> Hello Node.js! </h1>')
 });
 
