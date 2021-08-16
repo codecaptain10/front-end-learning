@@ -10,18 +10,49 @@ Switch, pobranie zawartości plików dla konkretnych ścieżek i JSON
         3) Udostępnianie plików JSON
         4) Pliki JavaScript
 */
-
+//http modul
 const http = require('http');
+//fs modul - to read/load files
+const fs = require('fs');
+//path module - to path to our files/templates
+const path = require('path');
 const port = process.env.port || 3000;
+
+//Example file to show JSON in point 3
+const users = [{
+    name: "Adam",
+    id: "1"
+}, {
+    name: "Ewa",
+    id: "2"
+}]
 
 http.createServer((req, res) => {
     //1) Switch 
     switch (req.url) {
         case '/':
-            res.end("<h1>Main page of our Website</h1>");
+            //2) Pobieranie template strony
+            fs.readFile(path.join(__dirname, "index.html"), (err, page) => {
+                if (err) {
+                    console.log(err);
+                    res.end("<h1>Problem with loading ...</h1>");
+                } else {
+                    res.end(page);
+                }
+            });
+            // res.end("<h1>Main page of our Website</h1>");
             break;
         case '/users':
-            res.end("<h1>Users of our Website</h1>");
+            //2) Pobieranie template strony
+            fs.readFile(path.join(__dirname, "users.html"), (err, page) => {
+                if (err) {
+                    console.log(err);
+                    res.end("<h1>Problem with loading ...</h1>");
+                } else {
+                    res.end(page);
+                }
+            });
+            //res.end("<h1>Users of our Website</h1>");
             break;
         case '/api/users':
             res.end("<h1>Users API</h1>");
