@@ -62,9 +62,12 @@ http.createServer((req, res) => {
             break;
             //4) Pliki JavaScript
         case '/code.js':
+            //This section is to show code.js as URL adress
             res.writeHead(200, {
                 'Content-Type': 'application/javascript; charset=utf-8'
             });
+
+            //This section is to load code.js to our webservice and use
             fs.readFile(path.join(__dirname, "/code.js"), (err, page) => {
                 if (err) {
                     console.log(err);
