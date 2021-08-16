@@ -60,6 +60,21 @@ http.createServer((req, res) => {
             res.end(usersJSON);
             // res.end("<h1>Users API</h1>");
             break;
+            //4) Pliki JavaScript
+        case '/code.js':
+            res.writeHead(200, {
+                'Content-Type': 'application/javascript; charset=utf-8'
+            });
+            fs.readFile(path.join(__dirname, "/code.js"), (err, page) => {
+                if (err) {
+                    console.log(err);
+                    res.end("<h1>Problem with loading ...</h1>");
+                } else {
+                    res.end(page);
+                }
+            });
+            //res.end('console.log("code.js file!")');
+            break;
         default:
             res.end("<h1>Website doesn't exist!</h1>");
 
