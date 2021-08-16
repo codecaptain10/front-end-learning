@@ -25,7 +25,7 @@ const users = [{
 }, {
     name: "Ewa",
     id: "2"
-}]
+}];
 
 http.createServer((req, res) => {
     //1) Switch 
@@ -55,7 +55,10 @@ http.createServer((req, res) => {
             //res.end("<h1>Users of our Website</h1>");
             break;
         case '/api/users':
-            res.end("<h1>Users API</h1>");
+            //3) Udostępnianie plików JSON
+            const usersJSON = JSON.stringify(users) //JS Object -> JSON
+            res.end(usersJSON);
+            // res.end("<h1>Users API</h1>");
             break;
         default:
             res.end("<h1>Website doesn't exist!</h1>");
