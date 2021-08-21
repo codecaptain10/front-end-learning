@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document to testinf encoding URL adress</title>
+</head>
+
+<body>
+    <form action="">
+        Imię: <br>
+        <input type="text" id="nameInput"><br> Nazwisko: <br>
+        <input type="text" id="surnameInput"><br>
+        <button type="submit">Wygreneruj odnośnik!</button><br>
+
+        <a href="">Jestem odnośnikiem!</a>
+
+        <script>
+            const a = document.querySelector('a');
+            const name = document.querySelector('#nameInput');
+            const surname = document.querySelector('#surnameInput');
+            const form = document.querySelector('form');
+
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const name = nameInput.value;
+                const surname = surnameInput.value;
+
+                const url = `http://localhost:3000/?name=${encodeURIComponent(name)}&surname=${endcodeURIComponent(surname)}`;
+            });
+
+
+            a.setAttribute('href', url);
+        </script>
+
+</body>
+
+</html>
