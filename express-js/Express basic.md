@@ -23,5 +23,22 @@
 	- Performance
 	- Frameworks
 	
+**Properties**
+	
+	- Object Request
+		- That what comes from server
+		- Information about client 
+		  (but also few information about user) 
+		- Few methods and poperties
+			- req.ip (Client's IP)
+			- req.ips (Orginal IP)
+			- req.method (used HTTP Method)
+			- req.url / req.orginalURL / req.path (Path)
+			- req.protocol / req.server (Use server HTTP/HTTPS ?)
+	- URL parameters and correct URL generator
+		- encodeURIComponent
+		- URLSearchParams
+	- Object Response
+	
 	
 
