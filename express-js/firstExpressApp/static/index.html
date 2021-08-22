@@ -27,12 +27,13 @@
 
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            const name = nameInput.value;
-            const surname = surnameInput.value;
+            const myName = nameInput.value;
+            const mySurname = surnameInput.value;
+
 
             const params = new URLSearchParams({
-                name: name,
-                surname: surname,
+                name: myName,
+                surname: mySurname
 
             });
 
