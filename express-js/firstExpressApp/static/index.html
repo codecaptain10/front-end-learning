@@ -11,30 +11,37 @@
 <body>
     <form action="">
         Imię: <br>
-        <input type="text" id="nameInput"><br> Nazwisko: <br>
-        <input type="text" id="surnameInput"><br>
+        <input type="text" class="nameInput"><br> Nazwisko: <br>
+        <input type="text" class="surnameInput"><br>
         <button type="submit">Wygreneruj odnośnik!</button><br>
+    </form>
 
-        <a href="">Jestem odnośnikiem!</a>
+    <a href="">Jestem odnośnikiem!</a>
 
-        <script>
-            const a = document.querySelector('a');
-            const name = document.querySelector('#nameInput');
-            const surname = document.querySelector('#surnameInput');
-            const form = document.querySelector('form');
+    <script>
+        const nameInput = document.querySelector('.nameInput');
+        const surnameInput = document.querySelector('.surnameInput');
+        const form = document.querySelector('form');
+        const a = document.querySelector('a');
 
 
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
-                const name = nameInput.value;
-                const surname = surnameInput.value;
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const name = nameInput.value;
+            const surname = surnameInput.value;
 
-                const url = `http://localhost:3000/?name=${encodeURIComponent(name)}&surname=${endcodeURIComponent(surname)}`;
+            const params = new URLSearchParams({
+                name: name,
+                surname: surname,
+
             });
+
+            const url = 'http://localhost:3000/?' + params;
 
 
             a.setAttribute('href', url);
-        </script>
+        });
+    </script>
 
 </body>
 
