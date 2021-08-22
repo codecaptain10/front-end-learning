@@ -10,13 +10,19 @@ app.listen(3000, '127.0.0.1', (req, res) => {
 });
 
 //Answer to GET to '/' path
-app.get('/', (req, res) => {
-    console.log("Welcome Star Page!");
-    res.send("<h1>Hello World</h1>");
-});
+// app.get('/', (req, res) => {
+//     console.log("Welcome Star Page!");
+//     res.send("<h1>Hello World</h1>");
+// });
 
-//Answer to GET to '/user' path
-app.get('/user', (req, res) => {
-    console.log("Welcome User Page!");
-    res.send("<h1>Hello User!</h1>");
+// //Answer to GET to '/user' path
+// app.get('/user', (req, res) => {
+//     console.log("Welcome User Page!");
+//     res.send("<h1>Hello User!</h1>");
+// });
+
+//Parameters from Requst object to console with req.query
+app.all('/', (req, res) => {
+    console.log(req.query);
+    console.log(`Hello ${req.query.name} + ${req.query.surname}`);
 });

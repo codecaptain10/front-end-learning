@@ -35,6 +35,7 @@
 			- req.method (used HTTP Method)
 			- req.url / req.orginalURL / req.path (Path)
 			- req.protocol / req.server (Use server HTTP/HTTPS ?)
+			- req.query (parameters from request)
 	- URL parameters and correct URL generator
 		- encodeURIComponent
 		- URLSearchParams
