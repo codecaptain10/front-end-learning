@@ -36,9 +36,21 @@
 			- req.url / req.orginalURL / req.path (Path)
 			- req.protocol / req.server (Use server HTTP/HTTPS ?)
 			- req.query (parameters from request)
+			- req.get() (download headers sended from client)
 	- URL parameters and correct URL generator
 		- encodeURIComponent
 		- URLSearchParams
+	- Routing and Object params
+		- Methods:
+			- GET	(get information about object)
+			- POST	(add new user/object)
+			- PATCH	(Update selected elements)
+			- PUT	(Update/replace old object with new)
+			- DELETE(Remove object/user)
+			- A few others ...
+		- Parameters in URL adresses
+			- Syntax: <path>/:<value>.../:<value> ...
+			- Example: /static/path/:value1/:value2
 	- Object Response
 	
 	
