@@ -52,6 +52,34 @@
 			- Syntax: <path>/:<value>.../:<value> ...
 			- Example: /static/path/:value1/:value2
 	- Object Response
+		- Send answer
+			- res.write() & res.end() 	(Node.js)
+			- res.send()				(Express.js)
+		- Method res.send()
+			- Better as res.write & res.end()
+			- Automatically change Content-Type to "text/html"
+			- Automatically change setting to UTF-8
+			- Automatically set Content-Length
+			- We can send: String, Buffer, array/Object
+		- Method res.json()
+			- Special method to send JSON
+			- With res.json we also become JSON
+		- Method res.location()
+			- Redirection to adress
+			- Take new adress as argument
+			- Require to select status (301, 302, ...)
+		- Method res.redirect()
+			- Also to redricection to other adress
+			- Easy as res.location()
+			- Doesn't requieres to set up status
+			- A lot of possibilities to go back and go forward
+		- HTTP Status codes
+			- 301 (permanent redirect)
+			- 302 (non-permanent redirect)
+			- 303 
+			- 307 
+		
+			
 	
 	
 
