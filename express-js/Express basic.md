@@ -81,6 +81,27 @@
 	- Send files in Express.js
 		- Better as in Node.js
 		- Method res.sendFile()
+		- Method res.attachment()
+		- Method res.download()
+		- All needed information in docs
+	- Working with headers
+		- Headers
+		- Cookies
+		- Method res.set()
+			- Using of a headerin our response
+			- First set headers, next the response
+		- Method res.headersSent()
+		- Method res.cookies()
+			- Setting cookies is setting headers
+			- Example: res.cookie('ad_id', '123')
+			- Cookies options:
+				- domain	(To wchich domain we send)
+				- expires	(How long should be rememberd)
+				- maxAge	
+				- httpOnly
+				- others ...
+		- Method res.clearCookie()
+			- Clear / remove cookie
 			
 		
 			
