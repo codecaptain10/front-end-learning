@@ -78,6 +78,10 @@
 			- 302 (non-permanent redirect)
 			- 303 
 			- 307 
+	- Send files in Express.js
+		- Better as in Node.js
+		- Method res.sendFile()
+			
 		
 			
 	
