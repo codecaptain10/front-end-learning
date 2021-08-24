@@ -1,5 +1,6 @@
-// Import Express pckage
+// Import Express package
 const express = require('express');
+const path = require('path');
 
 //Create web server
 const app = express();
@@ -78,35 +79,53 @@ Należy je definiować możliwie jak najniżej kodu, aby nie mieszały innych ś
 /*----- 5 -----*/
 //Object Response
 //res.send()
+// app.get('/', (req, res) => {
+//     res.send('Hello, World!');
+//     console.log("Hello, World!");
+// });
+
+// //res.send() array
+// app.get('/array', (req, res) => {
+//     const names = 'Szymon Piotr Rafał';
+//     const array = names.split(' ');
+//     res.send(array);
+//     console.log("Send array with names");
+// });
+
+// //res.json()
+// app.get('/send-json', (req, res) => {
+//     const name = "Szymon";
+//     res.json(name);
+//     console.log("Send JSON");
+// });
+
+// //res.location()
+// app.get('/relocation', (req, res) => {
+//     res.location('https://google.com');
+//     res.sendStatus(302);
+//     console.log("Relocation to Google.com - res.location()");
+// });
+
+// //res.redirect()
+// app.get('/redirection', (req, res) => {
+//     res.redirect('https://google.com');
+//     console.log("Relocation to Google.com  - res.redirect()");
+// });
+
+/*----- 6 -----*/
+//Send files in Express.js
+
 app.get('/', (req, res) => {
-    res.send('Hello, World!');
-    console.log("Hello, World!");
+    res.send(`<!DOCTYPE html>
+    <html>
+    <body>
+    <img src="/logo">
+    </body>
+    </html>
+    `);
 });
 
-//res.send() array
-app.get('/array', (req, res) => {
-    const names = 'Szymon Piotr Rafał';
-    const array = names.split(' ');
-    res.send(array);
-    console.log("Send array with names");
-});
-
-//res.json()
-app.get('/send-json', (req, res) => {
-    const name = "Szymon";
-    res.json(name);
-    console.log("Send JSON");
-});
-
-//res.location()
-app.get('/relocation', (req, res) => {
-    res.location('https://google.com');
-    res.sendStatus(302);
-    console.log("Relocation to Google.com - res.location()");
-});
-
-//res.redirect()
-app.get('/redirection', (req, res) => {
-    res.redirect('https://google.com');
-    console.log("Relocation to Google.com  - res.redirect()");
+app.get('/logo', (req, res) => {
+    const fileName = path.join(__dirname, 'static/mountains.jpg');
+    res.sendFile(fileName);
 });
