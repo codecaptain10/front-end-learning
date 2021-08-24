@@ -129,3 +129,16 @@ app.get('/logo', (req, res) => {
     const fileName = path.join(__dirname, 'static/mountains.jpg');
     res.sendFile(fileName);
 });
+
+/*----- 7 -----*/
+//Headers and cookies
+//Cookie, that remembers the name of user
+//Checkout in dev tools -> application -> cookies
+app.get('/hi/:name', (req, res) => {
+    const {
+        name
+    } = req.params;
+
+    res.cookie('visitor_name', name);
+    res.send('Name saved!');
+});
