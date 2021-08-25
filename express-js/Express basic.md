@@ -102,6 +102,27 @@
 				- others ...
 		- Method res.clearCookie()
 			- Clear / remove cookie
+	- MIDDLEWARE
+		- Important to learn!
+		- DOCS: https://expressjs.com/en/guide/using-middleware.html
+		- Middleware functions are functions that have access:
+			- to the request object (req), 
+			- the response object (res), 
+			- and the next middleware function 
+			in the application’s request-response cycle. 
+		- The next middleware function is commonly denoted by a variable named next.
+		- Examples:
+			- Middleware JSON: app.use(express.json())
+			- Middleware static: app.use(express.static())
+			- Cookies: app.use(cookieParser())
+		- An Express application can use the following types of middleware:
+			- Application-level middleware
+			- Router-level middleware
+			- Error-handling middleware
+			- Built-in middleware
+			- Third-party middleware
+			
+	- Express Application Structure: 
 			
 		
 			
