@@ -102,7 +102,9 @@
 				- others ...
 		- Method res.clearCookie()
 			- Clear / remove cookie
-	- MIDDLEWARE
+			
+**Middleware**
+
 		- Important to learn!
 		- DOCS: https://expressjs.com/en/guide/using-middleware.html
 		- Middleware functions are functions that have access:
@@ -122,7 +124,9 @@
 			- Built-in middleware
 			- Third-party middleware
 			
-	- Express Application Structure: 
+**Express Application Structure** 
+
+	- Example Express.js Application Structure
 			
 		
 			
