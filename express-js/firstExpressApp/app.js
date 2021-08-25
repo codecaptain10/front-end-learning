@@ -142,3 +142,30 @@ app.get('/hi/:name', (req, res) => {
     res.cookie('visitor_name', name);
     res.send('Name saved!');
 });
+
+/*----- 8 -----*/
+//Middleware
+app.use(express.json());
+
+app.post('/hello', (req, res) => {
+    const {
+        name,
+        surname
+    } = req.body;
+
+    res.send(`Hello ${name} ${surname}`);
+});
+
+//In console in Chrome write this command 
+/*fetch('/hello', {
+    method: 'POST',
+    body: JSON.stringify({
+        name: 'Jan',
+        surname: 'Kowalski',
+    }),
+    headers: {
+        'Content-Type': 'application/json',
+    },
+});
+*/
+//Then in Network -> All -> hello -> Response -> "Hello Jan Kowalski"
