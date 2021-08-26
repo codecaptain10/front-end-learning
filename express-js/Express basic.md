@@ -127,6 +127,23 @@
 **Express Application Structure** 
 
 	- Example Express.js Application Structure
+		|- app.js
+		|- package.json
+		|- public
+		|  |- index.html
+		|  |- images
+		|  |- javascripts
+		|  |- stylesheets
+		|     |- style.css
+		|
+		|- routes
+		   |- index.js
+		   |- users.js
+		   
+	- Generator
+		- Generator to basic Express.js application structure
+		- Install: npm install express-generator -g
+		- New project: express --no-view --git <Project/folder name>
 			
 		
 			
