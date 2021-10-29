@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Getting started with Chart.js</title>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+
+    <script>
+        let myChart = document.querySelector('#myChart');
+
+        myChart.getContext('2d');
+
+
+
+
+        let massPopChart = new Chart(myChart, {
+            type: 'line', //bar, horizontalBar, pie, line, radar, polarArea, doughnut
+            data: {
+                labels: ["Boston", "Los Angeles", "Miami", "Worcester", "Springfield"],
+                datasets: [{
+                    label: 'Population',
+                    data: [
+                        843242,
+                        232323,
+                        121212,
+                        54534,
+                        121341,
+                    ],
+                    backgroundColor: [
+                        'rgba(255,99,12,0.6)',
+                        'rgba(255,162,192,0.6)',
+                        'rgba(255,206,111,0.6)',
+                        'rgba(255,102,164,0.6)',
+                        'rgba(255,99,132,0.6)',
+
+                    ],
+                    borderWidth: 4,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: 'black'
+                }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'My chart.js App',
+                        fontSize: 30
+                    },
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            display: false,
+                            fontColor: '#000'
+                        }
+                    },
+                    layout: {
+                        padding: {
+                            left: 50,
+                            right: 0,
+                            bottom: 0,
+                            top: 0
+                        }
+                    },
+                    tooltips: {
+                        enabled: false
+                    }
+                }
+            }
+
+        });
+    </script>
+
+
+</body>
+
+</html>
