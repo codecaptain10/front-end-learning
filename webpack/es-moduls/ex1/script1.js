@@ -1,0 +1,1 @@
+export const valueFromScript1 = "Value from scrip1 1";
