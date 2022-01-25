@@ -4,12 +4,9 @@
 //     console.log("Some code to do ...");
 // }
 
-
-
 // console.log("Start");   //1
 // someFunction();         //2
 // console.log("End");     //3
-
 
 //---------- Async code example 1 ----------
 // console.log("Start");              //1
@@ -17,7 +14,6 @@
 //     console.log("Function ...")
 // }, 2000);
 // console.log("End");                //2
-
 
 //---------- Async code example 2 ----------
 // console.log("Start");
@@ -53,7 +49,6 @@
 // });
 
 // console.log("Finish");
-
 
 //---------- Callback Hell ----------
 // console.log("Start");
@@ -97,28 +92,26 @@ const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log("You got the user");
         resolve({
-            user: "Szymon"
+            user: "Szymon",
         });
     }, 2000);
 });
 
-promise.then((user) => {
+promise.then(user => {
     console.log(user);
-})
-
+});
 
 //---------- Create a Promise from functions with callbacks ----------
 
 function loginUser(email, password) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("Now we have the data")
+            console.log("Now we have the data");
             resolve({
-                userName: email
+                userName: email,
             });
         }, 2500);
     });
-
 }
 
 function getUserVideos(email) {
@@ -127,7 +120,6 @@ function getUserVideos(email) {
             resolve(["video1", "video2", "video3"]);
         }, 2000);
     });
-
 }
 
 function videoDetails(video) {
@@ -136,7 +128,6 @@ function videoDetails(video) {
             resolve(["Title video 1", "Title video 2", "Title video 3"]);
         }, 3000);
     });
-
 }
 
 loginUser("helloWorld@mail.com", "1234")
@@ -144,31 +135,31 @@ loginUser("helloWorld@mail.com", "1234")
     .then(videos => videoDetails(videos[0]))
     .then(details => videoDetails(deatail));
 
-
-
 //---------- Promise.all() ----------
 
 const yt = new Promise(resolve => {
     setTimeout(() => {
         console.log("getting stuff from youtube");
         resolve({
-            videos: [1, 2, 3, 4, 5]
-        }, 2000);
-    })
-})
-
+                videos: [1, 2, 3, 4, 5],
+            },
+            2000
+        );
+    });
+});
 
 const fb = new Promise(resolve => {
     setTimeout(() => {
         console.log("getting stuff from youtube");
         resolve({
-            user: "Name"
-        }, 5000);
-    })
-})
+                user: "Name",
+            },
+            5000
+        );
+    });
+});
 
-Promise.all([yt, fb]).then(result => console.log(result))
-
+Promise.all([yt, fb]).then(result => console.log(result));
 
 //---------- Async/await - syntactic sugar for Promises ----------
 
@@ -180,3 +171,7 @@ async function displayUser() {
 }
 
 displayUser();
+
+async function display() {
+    console.log("Show message");
+}
