@@ -39,7 +39,33 @@ ul {
   height: 60px;
 }
 
-.logo {
+.navbar .logo {
   font-size: x-large;
   font-weight: bold;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar a:hover {
+  color: lightskyblue;
 }
