@@ -23,7 +23,7 @@ a {
 
 .showcase {
   background-color: $primary-color;
-  color: white;
+  color: set-text-color($primary-color);
   height: 600px;
 
   nav {
@@ -42,11 +42,11 @@ a {
   }
 
   a:hover {
-    color: $seconadry-color;
+    color: $secondary-color;
   }
 
   a {
-    color: #fff;
+    color: set-text-color($primary-color);
   }
 
   &-content {
