@@ -6,6 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overscroll-behavior-y: none;
 }
 
 section {
@@ -37,4 +38,5 @@ p {
   height: 8px;
   background: linear-gradient(to right, #ff5f6d, #ffc371);
   z-index: 100;
+  transition: width 0.1 ease-out;
 }
