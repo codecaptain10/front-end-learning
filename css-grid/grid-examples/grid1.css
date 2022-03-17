@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: azure;
+}
+
+.container {
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+}
+
+.item {
+  background-color: steelblue;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
